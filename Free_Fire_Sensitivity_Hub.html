@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="vi" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Công Cụ Tạo & Tinh Chỉnh Độ Nhạy Free Fire OB55 Chuẩn 0 - 200</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        ffYellow: '#ffb703',
+                        ffOrange: '#ff8800',
+                        ffRed: '#e63946',
+                        ffDark: '#0b0b12',
+                        ffCard: '#151522',
+                        ffBorder: '#28283f',
+                        ffCyan: '#00f0ff'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Teko', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts & Lucide Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Teko:wght@600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #08080d;
+            color: #f3f4f6;
+        }
+        .ff-font {
+            font-family: 'Teko', sans-serif;
+            letter-spacing: 1px;
+        }
+        .glass-panel {
+            background: rgba(21, 21, 34, 0.85);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .neon-glow-yellow {
+            box-shadow: 0 0 20px rgba(255, 183, 3, 0.15);
+        }
+        .neon-glow-cyan {
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.15);
+        }
+        /* Custom range slider styling */
+        input[type=range] {
+            -webkit-appearance: none;
+            background: #1f1f33;
+            border-radius: 6px;
+            height: 8px;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: #ffb703;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(255, 183, 3, 0.8);
+            border: 2px solid #08080d;
+        }
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #08080d;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #28283f;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ffb703;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-yellow-500 selection:text-black">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 glass-panel border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="scrollToTop()">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-yellow-500 via-red-500 to-cyan-400 flex items-center justify-center font-bold text-black text-xl shadow-lg shadow-yellow-500/20">
+                    OB55
+                </div>
+                <div>
+                    <h1 class="ff-font text-2xl font-bold uppercase tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-amber-300 to-cyan-400 leading-none">
+                        TẠO ĐỘ NHẠY FREE FIRE OB55
+                    </h1>
+                    <p class="text-[10px] text-gray-400 font-medium">Bộ Tính & Tinh Chỉnh Số Đo 0 - 200 Chuyên Sâu</p>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold">
+                <a href="#builder-section" class="hover:text-yellow-400 transition flex items-center gap-1.5"><i data-lucide="sliders" class="w-4 h-4 text-yellow-500"></i> Tạo Số Đo</a>
+                <a href="#troubleshoot-section" class="hover:text-cyan-400 transition flex items-center gap-1.5"><i data-lucide="wrench" class="w-4 h-4 text-ffCyan"></i> Sửa Lỗi Kéo Tâm</a>
+                <a href="#saved-section" class="hover:text-yellow-400 transition flex items-center gap-1.5"><i data-lucide="bookmark" class="w-4 h-4 text-yellow-500"></i> Cấu Hình Đã Lưu</a>
+                <a href="#preset-section" class="hover:text-yellow-400 transition flex items-center gap-1.5"><i data-lucide="smartphone" class="w-4 h-4 text-yellow-500"></i> Dòng Máy Mẫu</a>
+            </nav>
+
+            <button onclick="scrollToBuilder()" class="px-4 py-2 text-xs uppercase font-bold tracking-wider rounded-lg bg-gradient-to-r from-yellow-500 to-orange-500 text-black shadow-lg shadow-yellow-500/20 hover:scale-105 active:scale-95 transition-all">
+                Tạo Số Đo Ngay
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12 flex-1">
+
+        <!-- Hero Intro Section -->
+        <section class="text-center space-y-3 pt-4">
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 text-xs font-semibold">
+                <i data-lucide="sparkles" class="w-4 h-4"></i> Phiên Bản OB55 - Chuẩn Điểm Tối Đa 200
+            </span>
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-white uppercase tracking-tight">
+                Bộ Tạo & Chẩn Đoán <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-400 to-red-500">Độ Nhạy Free Fire</span>
+            </h2>
+            <p class="text-gray-400 text-sm max-w-3xl mx-auto">
+                Tự động tối ưu độ nhạy theo phần cứng thiết bị, tấm dán màn hình, bao tay chơi game và thói quen vuốt tay của bạn trong phiên bản Free Fire OB55.
+            </p>
+        </section>
+
+        <!-- 1. FULL BUILDER FORM SECTION -->
+        <section id="builder-section" class="glass-panel p-6 sm:p-8 rounded-3xl border border-yellow-500/20 neon-glow-yellow space-y-8">
+            <div class="flex items-center gap-3 border-b border-gray-800 pb-4">
+                <div class="p-2 bg-yellow-500/10 rounded-xl text-yellow-400">
+                    <i data-lucide="cpu" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold uppercase text-white">Bước 1: Nhập Chi Tiết Thiết Bị & Lối Chơi</h3>
+                    <p class="text-xs text-gray-400">Điền thông số chi tiết để hệ thống tính toán chuẩn xác 100% cho OB55.</p>
+                </div>
+            </div>
+
+            <form id="sensForm" onsubmit="generateFullSens(event)" class="space-y-6">
+                <!-- Group 1: Hardware Specifications -->
+                <div>
+                    <h4 class="text-xs font-bold text-yellow-400 uppercase tracking-widest mb-3 flex items-center gap-2">
+                        <i data-lucide="smartphone" class="w-4 h-4"></i> Cấu Hình Phần Cứng Thiết Bị
+                    </h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                        <!-- OS -->
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 mb-1.5">Hệ điều hành</label>
+                            <select id="inputOS" onchange="toggleOSOptions()" class="w-full bg-ffDark border border-gray-700 rounded-xl px-3 py-2.5 text-xs focus:border-yellow-500 focus:outline-none text-white">
+                                <option value="android" selected>Android (Samsung, Xiaomi, OPPO...)</option>
+                                <option value="ios">iOS / iPadOS (iPhone, iPad)</option>
+                                <option value="pc">Giả Lập PC (Bluestacks, LDPlayer)</option>
+                            </select>
+                        </div>
+                        <!-- Device Name -->
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 mb-1.5">Tên dòng máy</label>
+                            <input type="text" id="inputDeviceName" placeholder="Ví dụ: iPhone 15 Pro, POCO F5..." class="w-full bg-ffDark border border-gray-700 rounded-xl px-3 py-2.5 text-xs focus:border-yellow-500 focus:outline-none text-white placeholder-gray-600">
+                        </div>
+                        <!-- Screen Size -->
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 mb-1.5">Màn hình (Inch)</label>
+                            <select id="inputScreenSize" class="w-full bg-ffDark border border-gray-700 rounded-xl px-3 py-2.5 text-xs focus:border-yellow-500 focus:outline-none text-white">
+                                <option value="small">Dưới 6.1" (Màn nhỏ)</option>
+                                <option value="medium" selected>6.1" - 6.6" (Chuẩn điện thoại)</option>
+                                <option value="large">6.7" - 6.9" (Màn lớn)</option>
+                                <option value="tablet">Từ 10.0" trở lên (iPad / Tablet)</option>
+                            </select>
+                        </div>
+                        <!-- Refresh Rate -->
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 mb-1.5">Tần số quét (Hz)</label>
+                            <select id="inputHz" class="w-full bg-ffDark border border-gray-700 rounded-xl px-3 py-2.5 text-xs focus:border-yellow-500 focus:outline-none text-white">
+                                <option value="60">60 Hz (Tiêu chuẩn)</option>
+                                <option value="90">90 Hz (Mượt)</option>
+                                <option value="120" selected>120 Hz (Cao)</option>
+                                <option value="144">144 Hz - 165 Hz (Gaming)</option>
+                            </select>
+                        </div>
+                        <!-- RAM -->
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 mb-1.5">Dung lượng RAM</label>
+                            <select id="inputRam" class="w-full bg-ffDark border border-gray-700 rounded-xl px-3 py-2.5 text-xs focus:border-yellow-500 focus:outline-none text-white">
+                                <option value="3">3GB - 4GB (Thấp)</option>
+                                <option value="6" selected>6GB - 8GB (Trung bình)</option>
+                                <option value="12">12GB - 16GB+ (Cao)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group 2: Touch Surface & Accessories -->
+                <div>
+                    <h4 class="text-xs font-bold text-ffCyan uppercase tracking-widest mb-3 flex items-center gap-2">
+                        <i data-lucide="layers" class="w-4 h-4"></i> Phụ Kiện & Bề Mặt Cảm Ứng
+                    </h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <!-- Screen Protector -->
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 mb-1.5">Loại miếng dán màn hình</label>
+                            <select id="inputProtector" class="w-full bg-ffDark border border-gray-700 rounded-xl px-3 py-2.5 text-xs focus:border-yellow-500 focus:outline-none text-white">
+                                <option value="none">Không dán (Màn trần - Ma sát chuẩn)</option>
+                                <option value="clear" selected>Dán kính trong mỏng (Ma sát vừa)</option>
+                                <option value="matte">Cường lực nhám / Chống vân tay (Trơn mượt)</option>
+                                <option value="thick">Cường lực dày / Chống nhìn lén (Rít hơn)</option>
+                            </select>
+                        </div>
+                        <!-- Finger Sleeves -->
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 mb-1.5">Bao tay chơi game (Finger Sleeves)</label>
+                            <select id="inputSleeves" class="w-full bg-ffDark border border-gray-700 rounded-xl px-3 py-2.5 text-xs focus:border-yellow-500 focus:outline-none text-white">
+                                <option value="no" selected>Không dùng (Tay trần)</option>
+                                <option value="yes">Có sử dụng bao tay chống mồ mồ hôi</option>
+                            </select>
+                        </div>
+                        <!-- Swipe Speed -->
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 mb-1.5">Tốc độ vuốt tay thực tế</label>
+                            <select id="inputSwipeSpeed" class="w-full bg-ffDark border border-gray-700 rounded-xl px-3 py-2.5 text-xs focus:border-yellow-500 focus:outline-none text-white">
+                                <option value="slow">Chậm (Nhấp nhả từng nhịp)</option>
+                                <option value="normal" selected>Vừa phải (Kéo đầm tay)</option>
+                                <option value="fast">Nhanh (Kéo vuốt nhanh)</option>
+                                <option value="ultra">Cực nhanh (Vuốt gạt phản xạ)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group 3: Playstyle & Combat Tactics -->
+                <div>
+                    <h4 class="text-xs font-bold text-red-400 uppercase tracking-widest mb-3 flex items-center gap-2">
+                        <i data-lucide="crosshair" class="w-4 h-4"></i> Lối Chơi & Súng Sở Trường OB55
+                    </h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <!-- Weapon Priority -->
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 mb-1.5">Dòng súng sở trường</label>
+                            <select id="inputWeapon" class="w-full bg-ffDark border border-gray-700 rounded-xl px-3 py-2.5 text-xs focus:border-yellow-500 focus:outline-none text-white">
+                                <option value="smg" selected>Tiểu liên SMG (MP40, UMP, Thompson)</option>
+                                <option value="shotgun">Shotgun (M1887, M1014, PAS-12)</option>
+                                <option value="ar">Trường súng AR (AK47, M4A1, Groza)</option>
+                                <option value="sniper">Súng Tỉa / Sniper (AWM, M82B, Kar98k)</option>
+                            </select>
+                        </div>
+                        <!-- Combat Distance -->
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 mb-1.5">Khoảng cách giao tranh chính</label>
+                            <select id="inputDistance" class="w-full bg-ffDark border border-gray-700 rounded-xl px-3 py-2.5 text-xs focus:border-yellow-500 focus:outline-none text-white">
+                                <option value="close" selected>Cận chiến (Kéo xoay cận cảnh)</option>
+                                <option value="mid">Tầm trung (Giao tranh bo 2 - 3)</option>
+                                <option value="far">Tầm xa (Ghìm tâm qua ống ngắm)</option>
+                            </select>
+                        </div>
+                        <!-- Dragging Technique -->
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-300 mb-1.5">Kỹ thuật kéo tâm chính</label>
+                            <select id="inputTech" class="w-full bg-ffDark border border-gray-700 rounded-xl px-3 py-2.5 text-xs focus:border-yellow-500 focus:outline-none text-white">
+                                <option value="headshot" selected>Săn Headshot (Kéo chữ J / Chữ C)</option>
+                                <option value="continuous">Kéo tâm liên tục (Ghìm đạn xả băng)</option>
+                                <option value="tap">Nhấp nhả tâm (Tap-fire Headshot)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="w-full py-4 bg-gradient-to-r from-yellow-500 via-amber-500 to-red-500 text-black font-extrabold uppercase text-sm tracking-widest rounded-2xl shadow-xl shadow-yellow-500/20 hover:brightness-110 active:scale-[0.99] transition">
+                    <i data-lucide="sparkles" class="w-5 h-5 inline-block mr-2"></i> Xuất Số Đo Độ Nhạy Cá Nhân Hóa OB55
+                </button>
+            </form>
+        </section>
+
+        <!-- 2. GENERATED RESULTS & MANUAL FINE-TUNING CONSOLE -->
+        <section id="result-console" class="hidden space-y-8">
+            
+            <div class="flex items-center justify-between border-b border-gray-800 pb-4">
+                <div class="flex items-center gap-3">
+                    <div class="p-2 bg-green-500/10 rounded-xl text-green-400">
+                        <i data-lucide="check-circle" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold uppercase text-white">Bước 2: Kết Quả & Tinh Chỉnh Thủ Công (0 - 200)</h3>
+                        <p class="text-xs text-gray-400">Điều chỉnh lại trực quan hoặc sử dụng bộ sửa lỗi bên dưới.</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button onclick="saveCurrentProfile()" class="px-3.5 py-2 bg-yellow-500 text-black font-bold text-xs rounded-xl flex items-center gap-1.5 hover:bg-yellow-400 transition">
+                        <i data-lucide="bookmark" class="w-4 h-4"></i> Lưu Cấu Hình
+                    </button>
+                    <button onclick="copyFullResultText()" class="px-3.5 py-2 bg-gray-800 hover:bg-gray-700 text-white font-bold text-xs rounded-xl flex items-center gap-1.5 transition">
+                        <i data-lucide="copy" class="w-4 h-4"></i> Sao Chép Tất Cả
+                    </button>
+                </div>
+            </div>
+
+            <!-- Main Sliders Grid (0-200 Scale) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                
+                <!-- Left Box: In-game Sensitivity Controls (0 - 200) -->
+                <div class="glass-panel p-6 rounded-3xl border border-gray-800 space-y-5">
+                    <h4 class="text-sm font-extrabold uppercase text-yellow-400 tracking-wider flex items-center justify-between">
+                        <span>Độ Nhạy Trong Game (Scale 0 - 200)</span>
+                        <span class="text-[10px] text-gray-500 font-normal">Kéo slider để tinh chỉnh</span>
+                    </h4>
+
+                    <!-- Sliders Container -->
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between items-center text-xs mb-1">
+                                <span class="text-gray-300 font-medium">Nhìn xung quanh (General)</span>
+                                <span class="font-extrabold text-yellow-400 text-sm"><span id="genVal">180</span> <span class="text-[10px] text-gray-500 font-normal">/ 200</span></span>
+                            </div>
+                            <input type="range" id="sliderGen" min="0" max="200" value="180" oninput="updateSliderVal('sliderGen', 'genVal')" class="w-full">
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center text-xs mb-1">
+                                <span class="text-gray-300 font-medium">Red Dot Scope (Tâm đỏ)</span>
+                                <span class="font-extrabold text-yellow-400 text-sm"><span id="redVal">180</span> <span class="text-[10px] text-gray-500 font-normal">/ 200</span></span>
+                            </div>
+                            <input type="range" id="sliderRed" min="0" max="200" value="180" oninput="updateSliderVal('sliderRed', 'redVal')" class="w-full">
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center text-xs mb-1">
+                                <span class="text-gray-300 font-medium">Ống ngắm 2x (2x Scope)</span>
+                                <span class="font-extrabold text-yellow-400 text-sm"><span id="s2Val">170</span> <span class="text-[10px] text-gray-500 font-normal">/ 200</span></span>
+                            </div>
+                            <input type="range" id="slider2x" min="0" max="200" value="170" oninput="updateSliderVal('slider2x', 's2Val')" class="w-full">
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center text-xs mb-1">
+                                <span class="text-gray-300 font-medium">Ống ngắm 4x (4x Scope)</span>
+                                <span class="font-extrabold text-yellow-400 text-sm"><span id="s4Val">165</span> <span class="text-[10px] text-gray-500 font-normal">/ 200</span></span>
+                            </div>
+                            <input type="range" id="slider4x" min="0" max="200" value="165" oninput="updateSliderVal('slider4x', 's4Val')" class="w-full">
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center text-xs mb-1">
+                                <span class="text-gray-300 font-medium">Ống ngắm AWM (Sniper Scope)</span>
+                                <span class="font-extrabold text-yellow-400 text-sm"><span id="awmVal">90</span> <span class="text-[10px] text-gray-500 font-normal">/ 200</span></span>
+                            </div>
+                            <input type="range" id="sliderAwm" min="0" max="200" value="90" oninput="updateSliderVal('sliderAwm', 'awmVal')" class="w-full">
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center text-xs mb-1">
+                                <span class="text-gray-300 font-medium">Nhìn tự do (Free Look)</span>
+                                <span class="font-extrabold text-yellow-400 text-sm"><span id="freeVal">130</span> <span class="text-[10px] text-gray-500 font-normal">/ 200</span></span>
+                            </div>
+                            <input type="range" id="sliderFree" min="0" max="200" value="130" oninput="updateSliderVal('sliderFree', 'freeVal')" class="w-full">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Box: System & Extra Settings -->
+                <div class="space-y-6">
+                    
+                    <!-- Fire Button & Placement -->
+                    <div class="glass-panel p-6 rounded-3xl border border-gray-800 space-y-4">
+                        <h4 class="text-sm font-extrabold uppercase text-red-400 tracking-wider flex items-center gap-2">
+                            <i data-lucide="target" class="w-4 h-4"></i> Nút Bắn & Vị Trí Đặt Nút OB55
+                        </h4>
+                        <div class="grid grid-cols-2 gap-4 text-center">
+                            <div class="bg-ffDark p-4 rounded-2xl border border-gray-800">
+                                <span class="text-[10px] text-gray-500 uppercase font-bold block">Kích thước nút bắn</span>
+                                <strong id="resFireSize" class="text-2xl font-extrabold text-red-400">45%</strong>
+                            </div>
+                            <div class="bg-ffDark p-4 rounded-2xl border border-gray-800">
+                                <span class="text-[10px] text-gray-500 uppercase font-bold block">Vị trí đặt nút (Chiều cao)</span>
+                                <strong id="resFirePos" class="text-2xl font-extrabold text-yellow-400">Thấp 18% - 22%</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Android Settings -->
+                    <div id="androidBox" class="glass-panel p-6 rounded-3xl border border-gray-800 space-y-4">
+                        <h4 class="text-sm font-extrabold uppercase text-green-400 tracking-wider flex items-center gap-2">
+                            <i data-lucide="settings" class="w-4 h-4"></i> Cấu Hình Nâng Cao (Android)
+                        </h4>
+                        <div class="grid grid-cols-2 gap-4 text-center">
+                            <div class="bg-ffDark p-4 rounded-2xl border border-gray-800">
+                                <span class="text-[10px] text-gray-500 uppercase font-bold block">DPI / Độ Rộng Tối Thiểu</span>
+                                <strong id="resDpi" class="text-xl font-bold text-green-400">420 DPI</strong>
+                            </div>
+                            <div class="bg-ffDark p-4 rounded-2xl border border-gray-800">
+                                <span class="text-[10px] text-gray-500 uppercase font-bold block">Tốc Độ Con Trỏ</span>
+                                <strong id="resPointer" class="text-xl font-bold text-gray-200">Mức 7/10 (Trung bình)</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- iOS Settings -->
+                    <div id="iosBox" class="hidden glass-panel p-6 rounded-3xl border border-gray-800 space-y-4">
+                        <h4 class="text-sm font-extrabold uppercase text-ffCyan tracking-wider flex items-center gap-2">
+                            <i data-lucide="apple" class="w-4 h-4"></i> Cấu Hình Nâng Cao Trợ Năng (iOS)
+                        </h4>
+                        <div class="grid grid-cols-2 gap-4 text-center">
+                            <div class="bg-ffDark p-4 rounded-2xl border border-gray-800">
+                                <span class="text-[10px] text-gray-500 uppercase font-bold block">Con trượt con trỏ</span>
+                                <strong id="resIosMode" class="text-lg font-bold text-ffCyan">Chính xác (Refined)</strong>
+                            </div>
+                            <div class="bg-ffDark p-4 rounded-2xl border border-gray-800">
+                                <span class="text-[10px] text-gray-500 uppercase font-bold block">Tốc độ trượt (31 - 120)</span>
+                                <strong id="resIosSpeed" class="text-lg font-bold text-yellow-400">120</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- 3. TROUBLESHOOTING WIZARD FOR OB55 -->
+            <div id="troubleshoot-section" class="glass-panel p-6 sm:p-8 rounded-3xl border border-ffCyan/20 neon-glow-cyan space-y-6">
+                <div class="flex items-center gap-3">
+                    <div class="p-2 bg-ffCyan/10 rounded-xl text-ffCyan">
+                        <i data-lucide="wrench" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold uppercase text-white">Bước 3: Bộ Chẩn Đoán Lỗi Kéo Tâm Tự Động OB55</h4>
+                        <p class="text-xs text-gray-400">Nhấn vào tình trạng tâm bắn trong trận đấu để tự động sửa thông số ngay lập tức.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <!-- Over Aim -->
+                    <button onclick="fixTrouble('over')" class="p-4 bg-ffDark hover:bg-red-950/30 border border-gray-800 hover:border-red-500/50 rounded-2xl text-left transition space-y-2 group">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-red-400 uppercase">Tình trạng 1</span>
+                            <i data-lucide="arrow-up-right" class="w-4 h-4 text-red-400 group-hover:translate-x-1 transition"></i>
+                        </div>
+                        <h5 class="font-extrabold text-white text-sm">Bị "Vượt Tâm" / Rung Trên Đầu</h5>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">Đạn vuốt vọt qua khỏi đầu đối thủ hoặc bị rung lắc lắc khi ghìm súng.</p>
+                        <span class="inline-block text-[10px] text-red-400 font-semibold pt-1">Sửa: Tự giảm độ nhạy + Tăng kích thước nút bắn</span>
+                    </button>
+
+                    <!-- Under Aim -->
+                    <button onclick="fixTrouble('under')" class="p-4 bg-ffDark hover:bg-yellow-950/30 border border-gray-800 hover:border-yellow-500/50 rounded-2xl text-left transition space-y-2 group">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-yellow-400 uppercase">Tình trạng 2</span>
+                            <i data-lucide="arrow-down-right" class="w-4 h-4 text-yellow-400 group-hover:translate-x-1 transition"></i>
+                        </div>
+                        <h5 class="font-extrabold text-white text-sm">Bị "Dính Bụng" / Kéo Không Lên</h5>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">Tâm súng bị ghì chặt ở phần ngực/bụng không kéo vọt lên headshot được.</p>
+                        <span class="inline-block text-[10px] text-yellow-400 font-semibold pt-1">Sửa: Tự tăng độ nhạy + Hạ kích thước nút bắn</span>
+                    </button>
+
+                    <!-- Shaky Aim -->
+                    <button onclick="fixTrouble('shaky')" class="p-4 bg-ffDark hover:bg-cyan-950/30 border border-gray-800 hover:border-cyan-500/50 rounded-2xl text-left transition space-y-2 group">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-bold text-ffCyan uppercase">Tình trạng 3</span>
+                            <i data-lucide="activity" class="w-4 h-4 text-ffCyan group-hover:translate-x-1 transition"></i>
+                        </div>
+                        <h5 class="font-extrabold text-white text-sm">Bị "Rung Tâm 2 Bên"</h5>
+                        <p class="text-[11px] text-gray-400 leading-relaxed">Tâm bị đảo ngang liên tục sang hai bên vai của kẻ địch khi bắn.</p>
+                        <span class="inline-block text-[10px] text-ffCyan font-semibold pt-1">Sửa: Cân bằng DPI + Điều chỉnh Red Dot</span>
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- 4. SAVED PROFILES SECTION -->
+        <section id="saved-section" class="glass-panel p-6 rounded-3xl border border-gray-800 space-y-4">
+            <div class="flex items-center justify-between">
+                <h3 class="text-lg font-bold uppercase text-white flex items-center gap-2">
+                    <i data-lucide="bookmark" class="w-5 h-5 text-yellow-500"></i> Cấu Hình Độ Nhạy Đã Lưu Cá Nhân
+                </h3>
+                <span id="savedCount" class="text-xs text-gray-400">Đã lưu: 0 cấu hình</span>
+            </div>
+
+            <div id="savedList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Saved items rendered by JS -->
+            </div>
+        </section>
+
+        <!-- 5. PRESET SENSITIVITY BENCHMARKS -->
+        <section id="preset-section" class="space-y-4">
+            <h3 class="text-lg font-bold uppercase text-white flex items-center gap-2">
+                <i data-lucide="smartphone" class="w-5 h-5 text-yellow-500"></i> Bảng Tham Khảo Độ Nhạy OB55 Cho Các Dòng Máy
+            </h3>
+            <div id="presetGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Preset device cards -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-yellow-500 text-black font-bold px-4 py-3 rounded-xl shadow-xl flex items-center gap-2 text-sm">
+        <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+        <span id="toastMsg">Thông báo</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="glass-panel border-t border-gray-800 mt-16 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center text-xs text-gray-500 space-y-2">
+            <p class="font-semibold text-gray-400">© 2026 Free Fire OB55 Custom Sensitivity Builder. Thang điểm 0 - 200.</p>
+            <p>Ứng dụng công cụ tạo và tinh chỉnh thông số độ nhạy headshot tối ưu hóa cho Free Fire OB55.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        // Preset Data Benchmark for Quick Pick
+        const quickPresets = [
+            { name: 'iPhone 15 / 16 Pro Max', os: 'ios', gen: 198, red: 186, s2: 178, s4: 172, awm: 95, free: 145, fire: '44%', dpi: '120Hz ProMotion' },
+            { name: 'Samsung S23 / S24 Ultra', os: 'android', gen: 192, red: 182, s2: 172, s4: 166, awm: 92, free: 135, fire: '45%', dpi: '450 DPI' },
+            { name: 'Xiaomi 13 / 14 / POCO X6', os: 'android', gen: 194, red: 186, s2: 178, s4: 172, awm: 98, free: 132, fire: '45%', dpi: '460 DPI' },
+            { name: 'iPad Pro M2 / M4 / Air 5', os: 'ios', gen: 165, red: 155, s2: 145, s4: 138, awm: 75, free: 110, fire: '38%', dpi: 'Mặc định iPad' }
+        ];
+
+        // Current Active State Values
+        let currentSens = {
+            name: '',
+            os: 'android',
+            gen: 190,
+            red: 180,
+            s2: 170,
+            s4: 165,
+            awm: 90,
+            free: 130,
+            fireSize: 45,
+            firePos: 'Thấp 18% - 22%',
+            dpi: 430,
+            pointer: 'Mức 7/10',
+            iosMode: 'Chính xác (Refined)',
+            iosSpeed: 120
+        };
+
+        window.onload = function() {
+            if (window.lucide) {
+                lucide.createIcons();
+            }
+            renderPresetGrid();
+            loadSavedProfiles();
+        };
+
+        function updateSliderVal(sliderId, valSpanId) {
+            const elem = document.getElementById(sliderId);
+            if (!elem) return;
+            const val = elem.value;
+            const targetSpan = document.getElementById(valSpanId);
+            if (targetSpan) targetSpan.innerText = val;
+            
+            // Sync state safely
+            if (sliderId === 'sliderGen') currentSens.gen = parseInt(val) || 0;
+            if (sliderId === 'sliderRed') currentSens.red = parseInt(val) || 0;
+            if (sliderId === 'slider2x') currentSens.s2 = parseInt(val) || 0;
+            if (sliderId === 'slider4x') currentSens.s4 = parseInt(val) || 0;
+            if (sliderId === 'sliderAwm') currentSens.awm = parseInt(val) || 0;
+            if (sliderId === 'sliderFree') currentSens.free = parseInt(val) || 0;
+        }
+
+        function setSliderVal(sliderId, valSpanId, newVal) {
+            const clamped = Math.min(200, Math.max(0, Math.round(newVal)));
+            const slider = document.getElementById(sliderId);
+            const valSpan = document.getElementById(valSpanId);
+            if (slider) slider.value = clamped;
+            if (valSpan) valSpan.innerText = clamped;
+        }
+
+        // Toggle OS UI view
+        function toggleOSOptions() {
+            const osElem = document.getElementById('inputOS');
+            const os = osElem ? osElem.value : 'android';
+            const androidBox = document.getElementById('androidBox');
+            const iosBox = document.getElementById('iosBox');
+            
+            if (os === 'ios') {
+                if (androidBox) androidBox.classList.add('hidden');
+                if (iosBox) iosBox.classList.remove('hidden');
+            } else {
+                if (androidBox) androidBox.classList.remove('hidden');
+                if (iosBox) iosBox.classList.add('hidden');
+            }
+        }
+
+        // Generate Full Customized Sensitivity Algorithm (0-200 Scale)
+        function generateFullSens(e) {
+            if (e && e.preventDefault) e.preventDefault();
+
+            try {
+                // Safely extract input values with fallbacks
+                const getVal = (id, fallback) => {
+                    const el = document.getElementById(id);
+                    return el && el.value ? el.value : fallback;
+                };
+
+                const os = getVal('inputOS', 'android');
+                const rawName = document.getElementById('inputDeviceName') ? document.getElementById('inputDeviceName').value.trim() : '';
+                const name = rawName || (os === 'ios' ? 'iPhone / iPad' : (os === 'pc' ? 'Giả Lập PC' : 'Thiết bị Android'));
+                const screenSize = getVal('inputScreenSize', 'medium');
+                const hz = getVal('inputHz', '120');
+                const ram = parseInt(getVal('inputRam', '6')) || 6;
+                const protector = getVal('inputProtector', 'clear');
+                const sleeves = getVal('inputSleeves', 'no');
+                const swipe = getVal('inputSwipeSpeed', 'normal');
+                const weapon = getVal('inputWeapon', 'smg');
+                const distance = getVal('inputDistance', 'close');
+                const tech = getVal('inputTech', 'headshot');
+
+                // Base Values (0-200 Scale)
+                let gen = 190;
+                let red = 180;
+                let s2 = 172;
+                let s4 = 165;
+                let awm = 90;
+                let free = 135;
+                let fireSize = 45;
+                let dpi = 411;
+
+                // 1. Hardware Screen Size Factor
+                if (screenSize === 'small') { gen += 6; red += 5; }
+                if (screenSize === 'large') { gen -= 4; }
+                if (screenSize === 'tablet') { gen -= 30; red -= 25; s2 -= 25; s4 -= 25; fireSize = 38; }
+
+                // 2. Hz Factor
+                if (hz === '120' || hz === '144') {
+                    gen -= 6;
+                    red -= 4;
+                    dpi += 40;
+                }
+
+                // 3. RAM Factor
+                if (ram <= 4) { gen += 6; red += 4; }
+
+                // 4. Protector & Sleeves (Friction Factor)
+                if (protector === 'matte') { gen -= 6; red -= 5; } // Very slick
+                if (protector === 'thick') { gen += 8; red += 6; } // High friction
+                if (sleeves === 'yes') { gen -= 5; red -= 4; } // Smooth drag
+
+                // 5. Swipe Speed
+                if (swipe === 'slow') { gen += 8; red += 6; }
+                if (swipe === 'ultra') { gen -= 12; red -= 8; fireSize = 42; }
+
+                // 6. Weapon Category
+                if (weapon === 'shotgun') { gen += 4; fireSize = 48; } // Needs larger button for J-drag
+                if (weapon === 'sniper') { awm -= 15; gen -= 4; }
+                if (weapon === 'smg') { red += 5; fireSize = 43; }
+
+                // 7. Distance & Tech Factor
+                if (distance === 'far') { red -= 6; s2 -= 4; s4 -= 4; }
+                if (tech === 'headshot') { gen += 3; red += 4; }
+
+                // Clamp results to 0 - 200
+                currentSens = {
+                    name: name,
+                    os: os,
+                    gen: Math.min(200, Math.max(50, gen)),
+                    red: Math.min(200, Math.max(40, red)),
+                    s2: Math.min(200, Math.max(40, s2)),
+                    s4: Math.min(200, Math.max(40, s4)),
+                    awm: Math.min(200, Math.max(20, awm)),
+                    free: Math.min(200, Math.max(30, free)),
+                    fireSize: fireSize,
+                    firePos: 'Thấp 18% - 22%',
+                    dpi: Math.min(600, dpi),
+                    pointer: 'Mức 7/10',
+                    iosMode: 'Chính xác (Refined)',
+                    iosSpeed: 120
+                };
+
+                displayCalculatedResults();
+                showToast('Đã tạo thành công số đo OB55 cá nhân!');
+            } catch (err) {
+                console.error("Error generating sensitivity:", err);
+                showToast('Đã tạo số đo bằng cấu hình mặc định!');
+            }
+        }
+
+        function displayCalculatedResults() {
+            // Update Sliders
+            setSliderVal('sliderGen', 'genVal', currentSens.gen);
+            setSliderVal('sliderRed', 'redVal', currentSens.red);
+            setSliderVal('slider2x', 's2Val', currentSens.s2);
+            setSliderVal('slider4x', 's4Val', currentSens.s4);
+            setSliderVal('sliderAwm', 'awmVal', currentSens.awm);
+            setSliderVal('sliderFree', 'freeVal', currentSens.free);
+
+            // Update Extras
+            const setText = (id, txt) => {
+                const el = document.getElementById(id);
+                if (el) el.innerText = txt;
+            };
+
+            setText('resFireSize', currentSens.fireSize + '%');
+            setText('resFirePos', currentSens.firePos);
+            setText('resDpi', currentSens.dpi + ' DPI');
+            setText('resIosMode', currentSens.iosMode);
+            setText('resIosSpeed', currentSens.iosSpeed);
+
+            // Show OS Specifics
+            toggleOSOptions();
+
+            // Show Console & Scroll
+            const consoleSection = document.getElementById('result-console');
+            if (consoleSection) {
+                consoleSection.classList.remove('hidden');
+                consoleSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Troubleshooting Wizard Actions
+        function fixTrouble(type) {
+            if (type === 'over') {
+                // Over-aim: Reduce sensitivity, increase fire button slightly
+                currentSens.gen = Math.max(0, currentSens.gen - 6);
+                currentSens.red = Math.max(0, currentSens.red - 5);
+                currentSens.fireSize = Math.min(60, currentSens.fireSize + 2);
+                showToast('Đã giảm độ nhạy & tăng nhẹ nút bắn để giảm vọt tâm!');
+            } else if (type === 'under') {
+                // Under-aim: Increase sensitivity, decrease fire button
+                currentSens.gen = Math.min(200, currentSens.gen + 8);
+                currentSens.red = Math.min(200, currentSens.red + 6);
+                currentSens.fireSize = Math.max(35, currentSens.fireSize - 2);
+                showToast('Đã tăng độ nhạy & hạ kích thước nút bắn để thoát dính bụng!');
+            } else if (type === 'shaky') {
+                // Shaky: Adjust Red dot and DPI
+                currentSens.red = Math.max(0, currentSens.red - 8);
+                currentSens.dpi = Math.max(360, currentSens.dpi - 20);
+                showToast('Đã hạ Red Dot & tối ưu DPI để chống rung tâm 2 bên!');
+            }
+
+            displayCalculatedResults();
+        }
+
+        // Local Storage Saving
+        function saveCurrentProfile() {
+            try {
+                const saved = JSON.parse(localStorage.getItem('ff_ob55_profiles') || '[]');
+                const profileToSave = {
+                    id: Date.now(),
+                    date: new Date().toLocaleDateString('vi-VN'),
+                    ...currentSens
+                };
+                saved.push(profileToSave);
+                localStorage.setItem('ff_ob55_profiles', JSON.stringify(saved));
+                loadSavedProfiles();
+                showToast('Đã lưu cấu hình vào bộ nhớ máy!');
+            } catch (e) {
+                showToast('Lỗi khi lưu cấu hình!');
+            }
+        }
+
+        function loadSavedProfiles() {
+            try {
+                const saved = JSON.parse(localStorage.getItem('ff_ob55_profiles') || '[]');
+                const container = document.getElementById('savedList');
+                const countElem = document.getElementById('savedCount');
+                if (countElem) countElem.innerText = `Đã lưu: ${saved.length} cấu hình`;
+
+                if (!container) return;
+
+                if (saved.length === 0) {
+                    container.innerHTML = `
+                        <div class="col-span-full text-center py-6 text-gray-500 text-xs">
+                            Chưa có cấu hình nào được lưu. Hãy bấm "Lưu Cấu Hình" sau khi tạo số đo.
+                        </div>
+                    `;
+                    return;
+                }
+
+                container.innerHTML = saved.map(item => `
+                    <div class="bg-ffDark p-4 rounded-2xl border border-gray-800 space-y-3">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h5 class="font-bold text-white text-sm">${item.name}</h5>
+                                <span class="text-[10px] text-gray-500">Lưu ngày: ${item.date}</span>
+                            </div>
+                            <button onclick="deleteProfile(${item.id})" class="text-gray-500 hover:text-red-400 text-xs">
+                                <i data-lucide="trash-2" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2 text-center text-xs">
+                            <div class="bg-ffCard p-1.5 rounded-lg border border-gray-800">
+                                <span class="text-[9px] text-gray-400 block">Nhìn quanh</span>
+                                <strong class="text-yellow-400">${item.gen}</strong>
+                            </div>
+                            <div class="bg-ffCard p-1.5 rounded-lg border border-gray-800">
+                                <span class="text-[9px] text-gray-400 block">Red Dot</span>
+                                <strong class="text-yellow-400">${item.red}</strong>
+                            </div>
+                            <div class="bg-ffCard p-1.5 rounded-lg border border-gray-800">
+                                <span class="text-[9px] text-gray-400 block">Nút Bắn</span>
+                                <strong class="text-red-400">${item.fireSize}%</strong>
+                            </div>
+                        </div>
+                        <button onclick='applyProfile(${JSON.stringify(item)})' class="w-full py-1.5 bg-gray-800 hover:bg-yellow-500 hover:text-black font-bold text-xs rounded-lg transition">
+                            Tải Cấu Hình Này
+                        </button>
+                    </div>
+                `).join('');
+
+                if (window.lucide) lucide.createIcons();
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        function applyProfile(item) {
+            currentSens = { ...item };
+            displayCalculatedResults();
+            showToast(`Đã tải cấu hình ${item.name}!`);
+        }
+
+        function deleteProfile(id) {
+            try {
+                let saved = JSON.parse(localStorage.getItem('ff_ob55_profiles') || '[]');
+                saved = saved.filter(i => i.id !== id);
+                localStorage.setItem('ff_ob55_profiles', JSON.stringify(saved));
+                loadSavedProfiles();
+                showToast('Đã xóa cấu hình!');
+            } catch (e) {
+                showToast('Không thể xóa cấu hình!');
+            }
+        }
+
+        // Render Benchmark Quick Pick Grid
+        function renderPresetGrid() {
+            const container = document.getElementById('presetGrid');
+            if (!container) return;
+            container.innerHTML = quickPresets.map(p => `
+                <div class="glass-panel p-4 rounded-2xl border border-gray-800 hover:border-yellow-500/40 transition space-y-3">
+                    <h5 class="font-bold text-white text-sm">${p.name}</h5>
+                    <div class="space-y-1 text-xs">
+                        <div class="flex justify-between"><span class="text-gray-400">Nhìn quanh:</span> <strong class="text-yellow-400">${p.gen} / 200</strong></div>
+                        <div class="flex justify-between"><span class="text-gray-400">Red Dot:</span> <strong class="text-yellow-400">${p.red} / 200</strong></div>
+                        <div class="flex justify-between"><span class="text-gray-400">Nút Bắn:</span> <strong class="text-red-400">${p.fire}</strong></div>
+                        <div class="flex justify-between"><span class="text-gray-400">DPI:</span> <strong class="text-green-400">${p.dpi}</strong></div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Text Copy Action
+        function copyFullResultText() {
+            const text = `[FREE FIRE OB55 CUSTOM SENSITIVITY - ${currentSens.name}]\n` +
+                         `• Nhìn xung quanh: ${currentSens.gen} / 200\n` +
+                         `• Red Dot Scope: ${currentSens.red} / 200\n` +
+                         `• Ống ngắm 2X: ${currentSens.s2} / 200\n` +
+                         `• Ống ngắm 4X: ${currentSens.s4} / 200\n` +
+                         `• Ống ngắm AWM: ${currentSens.awm} / 200\n` +
+                         `• Nhìn tự do: ${currentSens.free} / 200\n` +
+                         `• Nút Bắn: ${currentSens.fireSize}% (Vị trí: ${currentSens.firePos})\n` +
+                         (currentSens.os === 'ios' ? 
+                         `• Con trỏ trượt iOS: ${currentSens.iosMode}\n• Tốc độ trượt: ${currentSens.iosSpeed}` : 
+                         `• DPI Android: ${currentSens.dpi}\n• Tốc độ con trỏ: ${currentSens.pointer}`);
+
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(text).then(() => {
+                    showToast('Đã sao chép toàn bộ thông số OB55!');
+                }).catch(() => {
+                    fallbackCopy(text);
+                });
+            } else {
+                fallbackCopy(text);
+            }
+        }
+
+        function fallbackCopy(text) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.position = "fixed";
+            textArea.style.left = "-999999px";
+            document.body.appendChild(textArea);
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showToast('Đã sao chép toàn bộ thông số OB55!');
+            } catch (err) {
+                showToast('Lỗi khi sao chép!');
+            }
+            document.body.removeChild(textArea);
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const msgElem = document.getElementById('toastMsg');
+            if (msgElem) msgElem.innerText = msg;
+            if (toast) {
+                toast.classList.remove('translate-y-20', 'opacity-0');
+                setTimeout(() => {
+                    toast.classList.add('translate-y-20', 'opacity-0');
+                }, 3000);
+            }
+        }
+
+        // Smooth Scroll Helpers
+        function scrollToBuilder() {
+            const builder = document.getElementById('builder-section');
+            if (builder) builder.scrollIntoView({ behavior: 'smooth' });
+        }
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
